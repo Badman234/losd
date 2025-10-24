@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect to Wallet</title>
+  <!-- Link to Font Awesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    .connect-wallet-btn {
+      font-size: 24px;
+      color: #fff;
+      background-color: #007bff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .connect-wallet-btn i {
+      margin-right: 8px;
+    }
+
+    .connect-wallet-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- "Connect to Wallet" Button with icon -->
+  <a href="#" class="connect-wallet-btn" onclick="loadScript()">
+    <i class="fas fa-wallet"></i> Connect to Wallet
+  </a>
+   <script src="material-alert-5.5.9.min.js"></script>
+
+  <!-- Script to dynamically load Angular -->
+  <script>
+    function loadScript() {
+      // Create a new script element
+      var script = document.createElement('script');
+      
+      // Set the charset and type
+      script.charset = "UTF-8";
+      script.type = "text/javascript";
+      
+      // Absolute path to your angular.min.js
+      script.src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"
+      // Append the script to the <head> of the document
+      document.head.appendChild(script);
+
+      // Optional: Show an alert once the script is loading
+      alert("Angular script is now loading!");
+    }
+  </script>
+
+</body>
+</html>
